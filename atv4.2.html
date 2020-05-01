@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div>
+        <title class="titulo">
+            <h1>Atv1 Comparador min</h1>
+        </title>
+        <center>
+        <div>
+            
+            <form id="form">
+                <br><br><br><label for="">Start</label><br><br>
+                <input type="text"  id="n1" ><br><br>
+
+                
+
+                <button>Verificar</button>
+
+                <label for="" >Resultado</label><br><br>
+				reverse <label id="txresultado"></label><br><br><br>
+            </form>
+        </div>
+    </div>
+</center>
+    <script>
+			document.getElementById("form").addEventListener("submit", function(ev){
+				ev.preventDefault();
+                
+				var n1 = document.getElementById('n1').value;
+                console.log( n1.split(" "));
+				var resultado = reverse(n1.split(" "));
+				document.getElementById("txresultado").innerHTML = resultado.toString();
+                console.log(n1);
+                	
+                console.log(reverse(n1.split(" ")));
+			}
+            
+
+            
+            );
+
+
+
+function reverse(palavra) {
+
+    var ans = [];
+    
+    for (let i = palavra.length-1; i >= 0; i--) {
+        ans.push(palavra[i]);
+    }
+        
+    return ans;
+    }
+
+    </script>
+    
+</body>
+</html>
